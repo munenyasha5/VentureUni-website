@@ -1,0 +1,300 @@
+
+    
+
+        .brand-text{
+        font-family: 'montserrat',sans-serif;
+        font-size: 100px;
+        font-weight:lighter;
+        color: white;
+        text-align: center;
+        
+    }
+
+    
+        .brand-text2{
+        font-family: 'montserrat',sans-serif;
+        font-size: 100px;
+        font-weight:lighter;
+        color: rgb(255, 253, 253);
+        text-align: center;
+        }
+
+       .trips-text{
+        font-family: 'barlow condensed',sans-serif;
+        font-size: 20px;
+        font-weight:lighter;
+        color: rgb(48, 48, 48);
+        
+
+    
+        
+    }
+
+    .motto-text{
+        margin-bottom: 80px;
+    }
+
+
+
+    .venture{
+        font-family: 'barlow condensed',sans-serif;
+        color: rgb(50, 86, 62);
+        font-weight:bold;
+        font-size:30px;
+    
+    }      
+
+
+    .algeriaheader-text{
+        font-family: 'barlow condensed',sans-serif;
+        font-size: 25px;
+        font-weight:bold;
+        color: rgb(50, 86, 62);
+    
+        margin-top: 20px;
+
+    }
+
+
+
+    .algeria-text{
+        font-family: 'barlow condensed',sans-serif;
+        font-size: 18px;
+        font-weight:lighter;
+        color: rgb(48, 48, 48);
+
+        width: 600px;
+
+    }
+    
+    
+        .stay-button{
+            background-color:transparent;
+            font-size: 18px;
+            color:white;
+            height:0;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+        
+         .stay-button:hover{
+        opacity: 0.5;
+    }
+
+
+
+        .trip-button{
+            background-color:transparent;
+             font-size: 18px;
+            color:white;
+            height:0px;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+         .trip-button:hover{
+        opacity: 0.5;
+    }
+   
+
+
+
+        .events-button{
+            background-color:transparent;
+             font-size: 18px;
+            color:white;
+            height:0px;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+        
+         .events-button:hover{
+        opacity: 0.5;
+    }
+     
+
+
+        .connect-button{
+            background-color:transparent;
+             font-size: 18px;
+            color:white;
+            height:0px;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+        
+         .connect-button:hover{
+        opacity: 0.5;
+    }
+
+
+
+        .hub-button{
+            background-color:transparent;
+             font-size: 18px;
+            color:white;
+            height:0px;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+        
+         .hub-button:hover{
+        opacity: 0.5;
+    }
+     
+        .opportunities-button{
+            background-color:transparent;
+             font-size: 18px;
+            color:white;
+            height:0px;
+            width:140px;
+            border-color:transparent;
+            border-radius: 30px;
+            cursor:pointer;
+            margin-right: 14px;
+            transition: 0.15s;
+        }
+        
+         .opportunities-button:hover{
+        opacity: 0.5;
+    }
+     
+     
+
+         .about-button{
+            background-color:transparent;
+            font-family: 'barlow condensed',sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color:white;
+            height:40px;
+            width:300px;
+            border-radius: 30px;
+            border-color:white;
+            border-width: 1px;
+            cursor:pointer;
+            margin-top: 100px;
+            transition: 0.15s;
+        
+            
+        }
+        
+         .about-button:hover{
+        background-color: rgb(152, 155, 158);
+         }
+
+          .tripdiscover-button{
+            background-color:rgb(71, 91, 71);
+            color:white;
+            height:40px;
+            width:180px;
+            border-color:white;
+            border-radius: 30px;
+            border-width: 1px;
+            cursor:pointer;
+        
+            transition: 0.15s;
+    
+            border-radius: 30px;
+        
+        }
+        
+         .tripdiscover-button:hover{
+        background-color: rgb(113, 118, 123);
+        opacity:80%;
+         }
+
+
+
+
+.hero {
+    background-image: url("addimage/images/pic 1.jpg");
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    text-align: center;
+    color: white;
+}
+
+
+.tripsectionhomepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 50vh;
+    margin-top: 10px;
+}
+
+.sectionright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:repeat(2,1fr 3fr);
+    max-height: 80vh;
+    gap: 1px;
+}
+
+
+
+.item {
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.itemname {
+    font-family:'barlow condensed',sans-serif;
+    color:  rgb(50, 86, 62);
+    background:transparent;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+
+
+
+.venturetripspage {
+    background-image: url("addimage/constantine/1000_F_288861204_jtWu0rLqcKTaPkFSTNHhRPt8GFd0vRxV.jpg");
+    font-size: larger;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    text-align: center;
+    color: white;
+}
