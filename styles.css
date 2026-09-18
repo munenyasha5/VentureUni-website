@@ -1,19 +1,36 @@
+   
+    * {
+    box-sizing: border-box;
+}
 
-    
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
         .brand-text{
         font-family: 'montserrat',sans-serif;
-        font-size: 100px;
+        font-size: clamp(2rem, 6vw, 5rem);
+        white-space: nowrap;
         font-weight:lighter;
         color: white;
         text-align: center;
-        
-    }
 
-    
+        }
+        
+   
+
         .brand-text2{
         font-family: 'montserrat',sans-serif;
-        font-size: 100px;
+        font-size: clamp(2rem, 6vw, 5rem);
         font-weight:lighter;
         color: rgb(255, 253, 253);
         text-align: center;
@@ -21,17 +38,17 @@
 
        .trips-text{
         font-family: 'barlow condensed',sans-serif;
-        font-size: 20px;
+        font-size: clamp(1rem, 3vw, 1.3rem);
         font-weight:lighter;
         color: rgb(48, 48, 48);
-        
-
-    
-        
+          
     }
 
+
+
     .motto-text{
-        margin-bottom: 80px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
 
@@ -40,14 +57,14 @@
         font-family: 'barlow condensed',sans-serif;
         color: rgb(50, 86, 62);
         font-weight:bold;
-        font-size:30px;
+        font-size: clamp(1rem, 6vw, 2rem);
     
     }      
 
 
     .algeriaheader-text{
         font-family: 'barlow condensed',sans-serif;
-        font-size: 25px;
+        font-size: clamp(1rem, 6vw, 2rem);
         font-weight:bold;
         color: rgb(50, 86, 62);
     
@@ -59,131 +76,60 @@
 
     .algeria-text{
         font-family: 'barlow condensed',sans-serif;
-        font-size: 18px;
+        font-size: clamp(1rem, 3vw, 1.3rem);
         font-weight:lighter;
         color: rgb(48, 48, 48);
 
-        width: 600px;
+        width: 100%;
 
     }
     
     
-        .stay-button{
+        .hero-buttons{
+            display: flex;
+            justify-content:center;
+            gap: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+
+        }
+
+
+        .button{
+            display: flex;
+
+            align-items: center;
+            justify-content:center;
+
+            min-width: 40px;
+
+            padding:10px 20px;
+
             background-color:transparent;
-            font-size: 18px;
-            color:white;
-            height:0;
-            width:140px;
-            border-color:transparent;
+            color:#ffffff;
+
+            border-color:white;
             border-radius: 30px;
             cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
-        }
+
+            font-size: 1.3rem;
+            font-weight: 600;
+
+            transition: 0.3s;
+            flex: 1 1 220px;
+
+            max-width: 210px;
         
-         .stay-button:hover{
-        opacity: 0.5;
-    }
-
-
-
-        .trip-button{
-            background-color:transparent;
-             font-size: 18px;
-            color:white;
-            height:0px;
-            width:140px;
-            border-color:transparent;
-            border-radius: 30px;
-            cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
         }
-         .trip-button:hover{
+
+         .buttons:hover{
         opacity: 0.5;
     }
-   
-
-
-
-        .events-button{
-            background-color:transparent;
-             font-size: 18px;
-            color:white;
-            height:0px;
-            width:140px;
-            border-color:transparent;
-            border-radius: 30px;
-            cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
-        }
-        
-         .events-button:hover{
-        opacity: 0.5;
-    }
-     
-
-
-        .connect-button{
-            background-color:transparent;
-             font-size: 18px;
-            color:white;
-            height:0px;
-            width:140px;
-            border-color:transparent;
-            border-radius: 30px;
-            cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
-        }
-        
-         .connect-button:hover{
-        opacity: 0.5;
-    }
-
-
-
-        .hub-button{
-            background-color:transparent;
-             font-size: 18px;
-            color:white;
-            height:0px;
-            width:140px;
-            border-color:transparent;
-            border-radius: 30px;
-            cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
-        }
-        
-         .hub-button:hover{
-        opacity: 0.5;
-    }
-     
-        .opportunities-button{
-            background-color:transparent;
-             font-size: 18px;
-            color:white;
-            height:0px;
-            width:140px;
-            border-color:transparent;
-            border-radius: 30px;
-            cursor:pointer;
-            margin-right: 14px;
-            transition: 0.15s;
-        }
-        
-         .opportunities-button:hover{
-        opacity: 0.5;
-    }
-     
-     
 
          .about-button{
             background-color:transparent;
             font-family: 'barlow condensed',sans-serif;
-            font-size: 20px;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             font-weight: bold;
             color:white;
             height:40px;
@@ -192,15 +138,15 @@
             border-color:white;
             border-width: 1px;
             cursor:pointer;
-            margin-top: 100px;
+            margin-top:20px;
             transition: 0.15s;
         
-            
         }
         
          .about-button:hover{
         background-color: rgb(152, 155, 158);
          }
+
 
           .tripdiscover-button{
             background-color:rgb(71, 91, 71);
@@ -218,6 +164,7 @@
         
         }
         
+
          .tripdiscover-button:hover{
         background-color: rgb(113, 118, 123);
         opacity:80%;
@@ -225,15 +172,21 @@
 
 
 
-
 .hero {
     background-image: url("addimage/images/pic 1.jpg");
-    height: 650px;
+    height: 750px;
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
     text-align: center;
     color: white;
+    padding: 20px;
+}
+
+.kasbah{
+    align-items: center;
+    text-align: center;
+    padding: 80px;
 }
 
 
@@ -241,37 +194,122 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 50vh;
-    margin-top: 10px;
+
 }
 
-.sectionright {
+
+
+.sectionleft {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px;
+    height: 650px;
 }
+
+
+
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:repeat(2,1fr 3fr);
-    max-height: 80vh;
+    grid-template-rows:repeat(2,1fr 1fr);
     gap: 1px;
+    
 }
 
 
 
 .item {
     overflow: hidden;
+    text-align: center;
+    font-family: 'barlow condensed',sans-serif;
+    font-size: clamp(1rem, 6vw, 1rem);
+    color: rgb(50, 86, 62);
+    height: 330px;
+
 }
+
+
+
+
 
 .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/*VENTURE TRIPS PAGE*/
+
+
+.venturetripspage {
+    background-image: url("addimage/constantine/1000_F_288861204_jtWu0rLqcKTaPkFSTNHhRPt8GFd0vRxV.jpg");
+    font-size: larger;
+    height: 750px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+}
+
+
+
+/*LOGIN PAGE*/
+
+
+
+
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .tripsectionhomepage {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .tripsectionhomepage {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-text {
+        font-size: 2.2rem;
+    }
+}
+ @media (max-width: 600px) {
+    .motto-text {
+        font-size: 0.8rem;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 .itemname {
     font-family:'barlow condensed',sans-serif;
@@ -280,21 +318,5 @@
     text-align: center;
     padding: 0px;
     margin: 0px;
-}
-
-
-
-
-
-
-
-.venturetripspage {
-    background-image: url("addimage/constantine/1000_F_288861204_jtWu0rLqcKTaPkFSTNHhRPt8GFd0vRxV.jpg");
-    font-size: larger;
-    height: 650px;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    text-align: center;
-    color: white;
+    height: 1px;
 }
