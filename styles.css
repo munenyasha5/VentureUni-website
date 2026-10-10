@@ -16,6 +16,12 @@ img {
 }
 
 
+
+
+
+
+
+
         .brand-text{
         font-family: 'montserrat',sans-serif;
         font-size: clamp(2rem, 6vw, 5rem);
@@ -149,7 +155,7 @@ img {
 
 
           .tripdiscover-button{
-            background-color:rgb(71, 91, 71);
+            background-color: rgb(50, 86, 62);
             color:white;
             height:40px;
             width:180px;
@@ -320,3 +326,11 @@ img {
     margin: 0px;
     height: 1px;
 }
+
+.tripsearch{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2px;
+}
+
+
