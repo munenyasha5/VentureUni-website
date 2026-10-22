@@ -37,9 +37,20 @@
     <form class="login-form" autocomplete="off">
 
         <div class="input-box">
+
              <label for="log-email" class="label">Email</label>
-            <input type="text" class="input-field" id="log-email">
+            <input 
+            type="email" 
+            placeholder="Enter your email"
+            class="input-field" 
+            id="email"
+            required
+            autocomplete="email"
+            >
+            
+
             <i class="bx bx-envelope icon"></i>
+
         </div>
 
 
@@ -47,7 +58,13 @@
 
 
             <label for="password" class="label">Password</label>
-            <input type="password" class="input-field" id="password">
+            <input
+             type="password" 
+             placeholder="Enter your password"
+             class="input-field" 
+             id="password"
+             required
+             autocomplete="new-password">
            <i class="bx bx-arrow-in-right-square-half"></i> 
         </div>
 
