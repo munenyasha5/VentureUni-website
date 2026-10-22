@@ -1,109 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head> 
     <link rel="stylesheet" href="loginstyles.css">
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <meta name="viewport" content="width=device.width, initial-scale=1.0">
-    <title>
-        Document
-    </title> 
-      
-  
+   <!-- CORRECT -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VU-Login</title> 
+    
+    <!-- 1. LOAD SUPABASE FIRST -->
+    <script src="https://jsdelivr.net"></script>
+    
+    <!-- 2. LOAD YOUR LOGIN SCRIPT WITH DEFER -->
+    <script src="login.js" defer></script>
 </head>
 
-
-
-<body >
-
-    
-
-
+<body>
 <div class="wrapper">
-
     <div class="form-header">
-
         <div class="titles">
-            <div class="title-login">
-        VU-Login
-            </div>
+            <div class="title-login">VU-Login</div>
         </div>
-
     </div>
 
-
-
-    <form class="login-form" autocomplete="off">
+    <!-- Added direct id="login-form" -->
+    <form id="login-form" class="login-form" autocomplete="off">
+        <div class="input-box">
+            <label for="email" class="label">Email</label>
+            <input 
+                type="email" 
+                placeholder="Enter your email"
+                class="input-field" 
+                id="email"
+                required
+                autocomplete="email"
+            >
+            <i class="bx bx-envelope icon"></i>
+        </div>
 
         <div class="input-box">
-
-             <label for="log-email" class="label">Email</label>
-            <input 
-            type="email" 
-            placeholder="Enter your email"
-            class="input-field" 
-            id="email"
-            required
-            autocomplete="email"
-            >
-            
-
-            <i class="bx bx-envelope icon"></i>
-
-        </div>
-
-
-         <div class="input-box">
-
-
             <label for="password" class="label">Password</label>
             <input
-            type="password"
-            id="password"
-            placeholder="Create a password"
-            autocomplete="new-password"
-            minlength="8"
-            required
-            class="input-field"
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+                class="input-field"
             >
-           <i class="bx bx-arrow-in-right-square-half"></i> 
-
+            <i class="bx bx-arrow-in-right-square-half"></i> 
         </div>
 
-
         <div class="form-cols">
-
-        <div class="col-1"> </div>
+            <div class="col-1"></div>
             <div class="col-2"> 
                 <a href="#"> Forgot Password?</a>
             </div>
-         </div>
-
-         <br>
+        </div>
+        <br>
          
-
-            <button id="signin-button" class="btn-submit" type="submit">
-                Sign In
-            </button>
+        <button id="signin-button" class="btn-submit" type="submit">
+            Sign In
+        </button>
     
-         <br>
-         <br>
+        <br>
+        <br>
 
-
-         <div class="switch-form"> 
+        <div class="switch-form"> 
             <span>Don't have an account? <a class="sign-up" href="signup.html">Sign Up</a></span>
-         </div>
+        </div>
 
-
+        <!-- Output display element for messages -->
         <p id="message" role="status"></p>
-
     </form> 
-
 </div>
-
-
-
-       <script src="login.js"></script>
-   
 </body>
+</html>
