@@ -1,129 +1,96 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="loginstyles.css">
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venture Uni | Sign Up</title>
+    <title>VU-Login</title> 
+
+   
 </head>
 
+
 <body>
+<div class="wrapper">
+    <div class="form-header">
+        <div class="titles">
+            <div class="title-login">VU-Sign up</VU-></div>
+        </div>
+    </div>
 
-```
-<h1>Join Venture Uni</h1>
-<p>Create your student account.</p>
 
-<form id="signup-form">
+    <form id="signup-form" class="signup-form" autocomplete="off">
+         <div class="input-box">
+            <label for="firstname" class="label">First Name</label>
+            <input 
+                type="text" 
+                placeholder="Enter your first name"
+                class="input-field" 
+                id="firstname"
+                required
+            >
+            <i class="bx bx-user icon"></i>
+        </div>
 
-    <label for="email">Email address</label>
-    <input
-        type="email"
-        id="email"
-        placeholder="Enter your email"
-        autocomplete="email"
-        required
-    >
+        <div class="input-box">
+            <label for="lastname" class="label">Last Name</label>
+            <input 
+                type="text" 
+                placeholder="Enter your last name"
+                class="input-field" 
+                id="lastname"
+                required
+            >
+            <i class="bx bx-user icon"></i>
+        </div>
 
-    <br><br>
+        <div class="input-box">
+            <label for="email" class="label">Email</label>
+            <input 
+                type="email" 
+                placeholder="Enter your email"
+                class="input-field" 
+                id="email"
+                required
+                autocomplete="email"
+            >
+            <i class="bx bx-envelope icon"></i>
+        </div>
 
-    <label for="password">Password</label>
-    <input
-        type="password"
-        id="password"
-        placeholder="Create a password"
-        autocomplete="new-password"
-        minlength="8"
-        required
-    >
+        <div class="input-box">
+            <label for="password" class="label">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+                class="input-field"
+            >
+            <i class="bx bx-arrow-in-right-square-half"></i> 
+        </div>
 
-    <br><br>
-
-    <button type="submit">Sign Up</button>
-
-</form>
-
-<p id="message" role="status"></p>
-
+      
+        <br>
+         
+        <button id="signup-button" class="btn-submit" type="submit">
+            Sign Up
+        </button>
+        <div class="switch-form">
+    <span>
+        Already have an account?
+        <a href="login.html">Sign In</a>
+    </span>
+</div>
+        
+        <!-- Output display element for messages -->
+        <p id="message" role="status"></p>
+    </form> 
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-    // 1. Connect to your Supabase project
-
-    const SUPABASE_URL = "https://rwkqnfwxfvgxiumjmvrd.supabase.co";
-    const SUPABASE_KEY = "sb_publishable_wUexGffdXvWypGK93Pw-4A_e0uM_K7-";
-
-    const supabaseClient = window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_KEY
-    );
-
-
-    // 2. Find the form and message area
-
-    const signupForm = document.getElementById("signup-form");
-    const message = document.getElementById("message");
-
-
-    // 3. Run this code when the form is submitted
-
-    signupForm.addEventListener("submit", async function(event) {
-
-        // Stop the browser from reloading the page
-        event.preventDefault();
-
-        // 4. Read what the student entered
-
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
-
-        // Show a message while the request is running
-        message.textContent = "Creating your account...";
-
-        // Prevent repeated submissions while processing
-        const button = signupForm.querySelector("button");
-        button.disabled = true;
-
-        try {
-
-            // 5. Send the email and password to Supabase Auth
-
-            const { data, error } = await supabaseClient.auth.signUp({
-                email: email,
-                password: password
-            });
-
-            // 6. Handle errors
-
-            if (error) {
-                throw error;
-            }
-
-            // 7. Tell the student what happened
-
-            if (data.session) {
-                message.textContent =
-                    "Your account has been created successfully!";
-            } else {
-                message.textContent =
-                    "Sign-up submitted. Check your email for a confirmation link.";
-            }
-
-            signupForm.reset();
-
-        } catch (error) {
-
-            message.textContent =
-                "Could not create account: " + error.message;
-
-        } finally {
-
-            button.disabled = false;
-
-        }
-
-    });
-</script>
-```
-
+<script src="supabase-client.js"></script>
+<script src="signup.js"></script>
 </body>
 </html>

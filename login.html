@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <link rel="stylesheet" href="loginstyles.css">
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-   <!-- CORRECT -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VU-Login</title> 
-    
-    <!-- 1. LOAD SUPABASE FIRST -->
-    <script src="https://jsdelivr.net"></script>
-    
-    <!-- 2. LOAD YOUR LOGIN SCRIPT WITH DEFER -->
-    <script src="login.js" defer></script>
+
+   
 </head>
+
 
 <body>
 <div class="wrapper">
@@ -44,8 +39,8 @@
             <input
                 type="password"
                 id="password"
-                placeholder="Create a password"
-                autocomplete="new-password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
                 minlength="8"
                 required
                 class="input-field"
@@ -61,8 +56,8 @@
         </div>
         <br>
          
-        <button id="signin-button" class="btn-submit" type="submit">
-            Sign In
+        <button id="login-button" class="btn-submit" type="submit">
+            Login
         </button>
     
         <br>
@@ -76,5 +71,7 @@
         <p id="message" role="status"></p>
     </form> 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="login.js"></script>
 </body>
 </html>
